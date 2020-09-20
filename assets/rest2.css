@@ -1,0 +1,226 @@
+body {
+	font-family: Segoe UI;
+}
+.btn_group{
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+
+/*.top-bar{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.top-bar .button {
+  background-color:#00CED1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  float: left;
+}
+
+.top-bar .button:hover{
+  background-color: #20B2AA;
+}*/
+
+.table_searchpat, .datefordept, .datefordoc{
+	position: absolute;
+	top: 150px;
+	left: 400px;
+	width: 700px;
+	border: 3px solid #73AD21;
+	text-align: center;
+}
+.dateforcom, .table_searchdoc{
+	position: absolute;
+	top: 150px;
+	left: 300px;
+	width: 900px;
+	border: 3px solid #73AD21;
+	text-align: center;
+}
+.chart_dept, .chart_doc, .chart_comm{
+	position: absolute;
+	top: 210px;
+	left: 400px;
+	width: 700px;
+	height: 500px;
+	border: 3px solid #73AD21;
+}
+.table_viewdocs{
+	position: absolute;
+	top: 210px;
+	left: 250px;
+	width: 1400px;
+	text-align: center;
+	border: 3px solid #73AD21;
+}
+ .table_viewpats{
+	position: absolute;
+	top: 210px;
+	left: 400px;
+	width: 700px;
+	text-align: center;
+	border: 3px solid #73AD21;
+}
+.profile_table{
+	position: absolute;
+	top: 300px;
+	left: 500px;
+	width: 500px;
+	height: 400px;
+	border: 3px solid #73AD21;
+}
+
+.table_docpro{
+	position: absolute;
+	top: 200px;
+	right: 300px;
+	width: 600px;
+	border: 3px solid #73AD21;
+}
+.table_patpro{
+	position: absolute;
+	top: 200px;
+	right: 400px;
+	width: 400px;
+	border: 3px solid #73AD21;
+}
+
+.searchdata, .approvetable{
+	position: absolute;
+	top: 300px;
+	right: 200px;
+	width: 800px;
+	border: 3px solid #73AD21;
+}
+
+.btn_group .button {
+
+  background-color: #191970;
+  border: none;
+  color: white;
+  padding: 15px 32px;						/*side buttons */
+  text-align: center;
+  font-family: Segoe UI;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  width: 200px;
+  display: block;
+}
+
+.btn_group .button:hover {
+  background-color: #00CED1;
+}
+#submitForDept, #submitForDocs, #submitForCom, #searchDoc{
+  background-color: #191970;
+  border: none;
+  color: white;
+  font-family: Segoe UI;
+  padding: 7px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  width: 100px;
+  border-radius: 8px;
+}
+
+#submitForDept:hover, #submitForDocs:hover, #submitForCom:hover, #searchDoc:hover{
+  background-color: #00CED1;
+}
+
+#button, #show{
+  background-color: #191970;
+  border: none;
+  color: white;
+  font-family: Segoe UI;
+  padding: 7px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  width: 100px;
+  border-radius: 32px;
+}
+
+#button:hover, #show:hover{
+  background-color: #00CED1;
+}
+
+#fromDateDept, #toDateDept,#fromDateDoc, #toDateDoc, #toDateC, #fromDateC, #fromDateCom, #toDateCom, #department, #city, #dName, #pName{
+	padding: 5px;
+	font-family: Segoe UI;
+	width: 200px;
+}
+#name, #password, #confirmPassword, #dob, #id, #email, #gender, #docId, #docName, #docGender, #docDob, #docEmail, #dept, #city, #days, #time, #pat_count{
+	padding: 5px;
+	font-family: Segoe UI;
+	width: 200px;
+}
+
+#chat, #performance, #file, #review, #terminate{
+	background-color: #191970;
+	border: none;
+	color: white;
+	font-family: Segoe UI;
+	padding: 7px 20px;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 0.5s;
+	width: 150px;
+	border-radius: 32px;
+}
+
+#chat:hover, #performance:hover, #file:hover, #review:hover, #terminate:hover{
+	background-color: #00CED1; 
+}
+
+.edit, #done{
+	background-color: #191970;
+	color: white;
+	padding: 5px;
+	font-family: Segoe UI;
+	width: 50px;										/*edit profile button*/
+	transition-duration: 0.5s;
+	border-radius: 16px;
+}
+.edit:hover, #done:hover{
+	background-color: #00CED1; 
+}
+
+#yes{
+	background-color: black;
+	color: white;
+	padding: 5px;
+	font-family: Segoe UI;
+	width: 50px;										/*terminate yes button*/
+	transition-duration: 0.5s;
+	border-radius: 16px;
+}
+#yes:hover{
+	background-color: red; 
+}
+
+#no{
+	background-color: black;
+	color: white;
+	padding: 5px;
+	font-family: Segoe UI;
+	width: 50px;										/*terminate no button*/
+	transition-duration: 0.5s;
+	border-radius: 16px;
+}
+#no:hover{
+	background-color: green; 
+}
