@@ -37,7 +37,7 @@
 	<body>
 		<div class="btn_group">
 					<button class="button" onclick="location.href='dashboard.php'">Dashboard</button>
-					<button class="button" name="profile" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
+					<button class="button" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
 					<button class="button" onclick="location.href='registration.php'"> Create Admin</button>
 					<button class="button" onclick="location.href='approvedoctors.php'"> Approve Doctors</button>
 					<button class="button" onclick="location.href='viewdoctors.php'"> View Doctors</button>
@@ -46,7 +46,7 @@
 					<button class="button" onclick="location.href='populardepartments.php'"> Popular Departments</button>
 					<button class="button" onclick="location.href='commission.php'"> commission</button>
 					<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
-					<button class="button" name="logout" onclick="location.href='../php/logout.php'">Logout</button>
+					<button class="button" onclick="location.href='../php/logout.php'">Logout</button>
 		</div>
 			<form action="../php/operations.php" method="post" enctype="multipart/form-data">
 			<table class="table_docpro">
