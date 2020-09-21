@@ -1,13 +1,7 @@
 <?php
 	require_once('../php/session.php');
 	require_once('../service/userService.php');
-	if(isset($_GET['error']))
-	{
-		if($_GET['error']=="date_null")
-		{
-			echo "You must enter Dates";
-		}
-	}
+	
 	if(isset($_SESSION['type']))
 	{
 		$type=$_SESSION['type'];
@@ -99,19 +93,20 @@
 	  </script>
 </head>
 	<body>
-		<div class="btn_group">
-					<button class="button" onclick="location.href='dashboard.php'">Dashboard</button>
-					<button class="button" name="profile" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
-					<button class="button" onclick="location.href='registration.php'"> Create Admin</button>
-					<button class="button" onclick="location.href='approvedoctors.php'"> Approve Doctors</button>
-					<button class="button" onclick="location.href='viewdoctors.php'"> View Doctors</button>
-					<button class="button" onclick="location.href='viewpatients.php'"> View Patients</button>
-					<button class="button" onclick="location.href='populardoctors.php'"> Popular Doctors</button>
-					<button class="button" onclick="location.href='populardepartments.php'"> Popular Departments</button>
-					<button class="button" onclick="location.href='commission.php'"> commission</button>
-					<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
-					<button class="button" name="logout" onclick="location.href='../php/logout.php'">Logout</button>
-		</div>
+		<h1 id="h1">Doctor-Patient Portal</h1>
+			<div class="btn_group">
+				<button class="button" onclick="location.href='dashboard.php'">Dashboard</button>
+				<button class="button" name="profile" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
+				<button class="button" onclick="location.href='registration.php'"> Create Admin</button>
+				<button class="button" onclick="location.href='approvedoctors.php'"> Approve Doctors</button>
+				<button class="button" onclick="location.href='viewdoctors.php'"> View Doctors</button>
+				<button class="button" onclick="location.href='viewpatients.php'"> View Patients</button>
+				<button class="button" onclick="location.href='populardoctors.php'"> Popular Doctors</button>
+				<button class="button" onclick="location.href='populardepartments.php'"> Popular Departments</button>
+				<button class="button" onclick="location.href='commission.php'"> commission</button>
+				<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
+				<button class="button" name="logout" onclick="location.href='../php/logout.php'">Logout</button>
+			</div>
 		<div class="dateforcom">
 		<form action="" method="post">
 		<select id="department" name="department">
@@ -124,6 +119,15 @@
 		To <input type="date" id="toDateCom" name="toDateCom">
 		<input type="submit" id="submitForCom" name="submitForCom" value="Show">
 		</form>
+		<?php 
+		if(isset($_GET['error']))
+		{
+			if($_GET['error']=="date_null")
+			{
+				echo "You must enter Dates";
+			}
+		}
+	?>
 		</div>
 		<div class="chart_comm" id="chart"></div>
 	</body>
