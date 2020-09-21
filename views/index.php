@@ -4,7 +4,7 @@
 ?>
 <html>
 <head>
-	<title>View Doctors</title>
+	<title>Doctors Patient Portal</title>
 	<link href="../assets/restP.css" rel="stylesheet">
 	<!--<script type="text/javascript" src="../assets/js.js"></script>-->
 </head>
