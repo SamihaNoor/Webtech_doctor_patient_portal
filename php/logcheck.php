@@ -33,7 +33,17 @@
 				}
 				else if($status==2)
 				{
-					
+					$_SESSION['id']=$userId;
+					$_SESSION['type']=$status;
+					$_SESSION['status']  = "OK";
+					if(isset($_POST['rememberme']))
+					{
+						setcookie('id', $userId, time()+360, '/');
+						setcookie('password', $password, time()+360, '/');
+						setcookie('type', $status, time()+360, '/');
+						setcookie('status', "OK", time()+360, '/');
+					}
+					header('location: ../views/doc_dashboard.php');
 				}
 				else if($status==3)
 				{
