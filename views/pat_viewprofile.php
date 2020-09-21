@@ -42,8 +42,7 @@
 					<button class="button" onclick="location.href='pat_dashboard.php'">Dashboard</button>
 					<button class="button" onclick="location.href='pat_viewprofile.php'"><?php echo $name;?></button>
 					<button class="button" onclick="location.href='pat_requestedApp.php'">Appointments</button>
-					<button class="button" onclick="location.href='pat_populardoctors.php'"> Popular Doctors</button>
-					<button class="button" onclick="location.href='pat_populardepartments.php'"> Popular Departments</button>
+					<button class="button" onclick="location.href='pat_history.php'">History</button>
 					<button class="button" onclick="location.href='../php/logout.php'">Logout</button>
 		</div>
 		
