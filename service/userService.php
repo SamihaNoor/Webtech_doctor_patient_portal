@@ -214,8 +214,8 @@
 		{
 			echo "DB connection error";
 		}
-		
-		$sql= "select * from credentials where userId=".$userId." and password='".$password."'";
+		$status=1;
+		$sql= "select * from credentials where userId=".$userId." and password='".$password."' and status=".$status."";
 		$data= mysqli_query($con,$sql);
 		$admin = mysqli_fetch_assoc($data);
 		
@@ -249,6 +249,51 @@ function getDoctors()
 
 	return $doctors;
 }
+
+
+//chat doc admin
+//send msg
+function sendMsg($adId,$docId,$msg)
+{
+	$con = dbConnection();
+
+	if(!$con)
+	{
+		echo "DB connection error";
+	}
+	$sql = "INSERT INTO chats_docs_admins (adId, docId, msg) VALUES (".$adId.",".$docId.",'".$msg."')";
+	$result= mysqli_query($con,$sql);
+	if($result)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function getMsg($adId,$docId)
+{
+	$con = dbConnection();
+
+	if(!$con)
+	{
+		echo "DB connection error";
+	}
+	$sql="select * from chats_docs_admins where adId=".$adId." and docId=".$docId."";
+	$data= mysqli_query($con,$sql);
+	$msgs = [];
+
+	while($row = mysqli_fetch_assoc($data)){
+		array_push($msgs, $row);
+	}
+
+	return $msgs;
+}
+
+
+//terminate doctor
 	function terminate($docId)
 	{
 		$con = dbConnection();
