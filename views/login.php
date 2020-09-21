@@ -12,6 +12,17 @@
 			echo $e;
 			echo "Invalid username or Password";
 		}
+
+		if($_GET['error'] == 'invalid_request'){
+			echo "You have to login first...";
+		}
+
+	}else if(isset($_GET['success']))
+	{
+		
+		if($_GET['success'] == 'registration_done'){
+			echo "Registration Done! Now you can login...";
+		}
 	}
 
 ?>
@@ -48,10 +59,10 @@
 							<tr>
 								<td colspan="2" align="center"><input id="login" type="submit" name="submit" value="Login"></td>
 							</tr>
-							<tr><td colspan="2" align="center"><sub>Don't have an account?</sub></tr></td>
+							<tr><td colspan="2" align="center"><sub style="color:white;">Don't have an account?</sub></tr></td>
 							<tr><td colspan="2" align="center"><button class="regpat" onclick="location.href='pat_registration.php'">Register as Patient</button></tr></td>
-							<tr><td colspan="2" align="center"><sub>or</tr></sub></td>
-							<tr><td colspan="2" align="center"><button class="regdoc" onclick="location.href='login.php'">Register as Doctor</button></tr></td>
+							<tr><td colspan="2" align="center"><sub style="color:white;">or</tr></sub></td>
+							<tr><td colspan="2" align="center"><button class="regdoc" onclick="location.href='doc_registration.php'">Register as Doctor</button></tr></td>
 						</table>
 					</fieldset>
 				</form>
