@@ -31,6 +31,7 @@
 	<link href="../assets/rest2.css" rel="stylesheet">
 </head>
 	<body>
+		<h1 id="h1">Doctor-Patient Portal</h1>
 		<div class="top-bar">
 			
 			
@@ -44,7 +45,7 @@
 					<button class="button" onclick="location.href='viewpatients.php'"> View Patients</button>
 					<button class="button" onclick="location.href='populardoctors.php'"> Popular Doctors</button>
 					<button class="button" onclick="location.href='populardepartments.php'"> Popular Departments</button>
-					<button class="button" onclick="location.href='commission.php'"> commission</button>
+					<button class="button" onclick="location.href='commission.php'"> Commission</button>
 					<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
 					<button class="button" onclick="location.href='../php/logout.php'">Logout</button>
 		</div>
