@@ -32,7 +32,7 @@
 	<!--<script type="text/javascript" src="../assets/js.js"></script>-->
 </head>
 	<body>
-		
+		<h1 id="h1">Doctor-Patient Portal</h1>
 		<div class="btn_group">
 					<button class="button" onclick="location.href='dashboard.php'">Dashboard</button>
 					<button class="button" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
