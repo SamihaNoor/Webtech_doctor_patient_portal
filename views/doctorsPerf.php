@@ -24,12 +24,12 @@
 		$admin = getProfile($id);
 		$name = $admin['name'];
 	
-	$docName=$_GET['docName'];
+		$docName=$_GET['docName'];
 	
 ?>
 <html>
 <head>
-	<title>Consulted Patients</title>
+	<title>Doctor's Performance</title>
 	<link href="../assets/rest2.css" rel="stylesheet">
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -41,11 +41,25 @@
         var data = google.visualization.arrayToDataTable([
         ['Date', 'Consulted Patients'],
         <?php
-		$data = getPatNo($docName,$_POST['fromDateC'],$_POST['toDateC']);
-		  for($i=0;$i!=count($data);$i++)
-		  {
-			  echo "['".$data[$i]['date']."',".$data[$i]['pat']."],";
-		  }
+			if(isset($_POST['submitForPats']))
+			{
+				$fromDateC = $_POST['fromDateC'];
+				$toDateC = $_POST['toDateC'];
+				
+				if(empty($fromDateC) || empty($fromDateC))
+				{
+					echo "Enter Dates";
+				}
+				else
+				{
+					$data = getPatNo($docName,$fromDateC,$toDateC);
+					for($i=0;$i!=count($data);$i++)
+					{
+						echo "['".$data[$i]['date']."',".$data[$i]['pat']."],";
+					}
+				}
+			}
+		
         ?>
         ]);
 
@@ -61,19 +75,20 @@
 	  </script>
 </head>
 	<body>
-		<div class="btn_group">
-					<button class="button" onclick="location.href='dashboard.php'">Dashboard</button>
-					<button class="button" name="profile" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
-					<button class="button" onclick="location.href='registration.php'"> Create Admin</button>
-					<button class="button" onclick="location.href='approvedoctors.php'"> Approve Doctors</button>
-					<button class="button" onclick="location.href='viewdoctors.php'"> View Doctors</button>
-					<button class="button" onclick="location.href='viewpatients.php'"> View Patients</button>
-					<button class="button" onclick="location.href='populardoctors.php'"> Popular Doctors</button>
-					<button class="button" onclick="location.href='populardepartments.php'"> Popular Departments</button>
-					<button class="button" onclick="location.href='commission.php'"> commission</button>
-					<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
-					<button class="button" name="logout" onclick="location.href='../php/logout.php'">Logout</button>
-		</div>
+		<h1 id="h1">Doctor-Patient Portal</h1>
+			<div class="btn_group">
+				<button class="button" onclick="location.href='dashboard.php'">Dashboard</button>
+				<button class="button" onclick="location.href='viewprofile.php'"><?php echo $name;?></button>
+				<button class="button" onclick="location.href='registration.php'"> Create Admin</button>
+				<button class="button" onclick="location.href='approvedoctors.php'"> Approve Doctors</button>
+				<button class="button" onclick="location.href='viewdoctors.php'"> View Doctors</button>
+				<button class="button" onclick="location.href='viewpatients.php'"> View Patients</button>
+				<button class="button" onclick="location.href='populardoctors.php'"> Popular Doctors</button>
+				<button class="button" onclick="location.href='populardepartments.php'"> Popular Departments</button>
+				<button class="button" onclick="location.href='commission.php'"> Commission</button>
+				<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
+				<button class="button" onclick="location.href='../php/logout.php'">Logout</button>
+			</div>
 		<div class="datefordoc">
 		<form action="" method="post">
 		From <input type="date" id="fromDateC" name="fromDateC">
