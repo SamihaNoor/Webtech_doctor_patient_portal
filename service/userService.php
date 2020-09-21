@@ -249,7 +249,46 @@ function getDoctors()
 
 	return $doctors;
 }
+//chat pat admin
+//send msg
+function sendMsgP($adId,$patId,$msg)
+{
+	$con = dbConnection();
 
+	if(!$con)
+	{
+		echo "DB connection error";
+	}
+	$sql = "INSERT INTO chats_pats_admins (adId, patId, msg) VALUES (".$adId.",".$patId.",'".$msg."')";
+	$result= mysqli_query($con,$sql);
+	if($result)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function getMsgP($adId,$patId)
+{
+	$con = dbConnection();
+
+	if(!$con)
+	{
+		echo "DB connection error";
+	}
+	$sql="select * from chats_pats_admins where adId=".$adId." and patId=".$patId."";
+	$data= mysqli_query($con,$sql);
+	$msgs = [];
+
+	while($row = mysqli_fetch_assoc($data)){
+		array_push($msgs, $row);
+	}
+
+	return $msgs;
+}
 
 //chat doc admin
 //send msg
