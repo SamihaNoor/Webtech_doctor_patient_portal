@@ -26,12 +26,12 @@
 	
 		if (isset($_GET['patId']))
 		{
-			$patient = getPat($_GET['patId']);
+			$patId = $_GET['patId'];
 		}
 ?>
 <html>
 <head>
-	<title>Patient's profile</title>
+	<title>Chat Patient</title>
 	<link href="../assets/rest2.css" rel="stylesheet">
 </head>
 	<body>
@@ -49,47 +49,45 @@
 				<button class="button" onclick="location.href='complainbox.php'"> Complain Box</button>
 				<button class="button" onclick="location.href='../php/logout.php'">Logout</button>
 			</div>
-			<form action="../php/operations.php?patId=<?=$patient['patId']?>" method="post" enctype="multipart/form-data">
-			<table class="table_patpro">
-				<tr>
-					<td colspan="2"><h3>Patient's Information</td></td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td><?php echo $patient['patId']?></td>
-				</tr>
-				<tr>
-					<td>Name</td>
-					<td><?php echo $patient['patName']?></td>
-				</tr>
-				<tr>
-					<td>Email</td>
-					<td><?php echo $patient['patEmail']?></td>
-				</tr>
-				<tr>
-					<td>Contact No.</td>
-					<td><?php echo $patient['patContact']?></td>
-				</tr>
-				<tr>
-					<td>Date Of Birth</td>
-					<td><?php echo $patient['patDob']?></td>
-				</tr>
-				<tr>
-					<td>Gender</td>
-					<td><?php 
-								if($patient['patGender']==1) 
-									echo "Male";
-								else
-									echo "Female";
+				<div class="table_chat">
+					<div class="msgBox">
+						<?php
+						
+							$data = getMsgP($id,$patId);
+							for($i=0;$i!=count($data);$i++)
+							{?>
+						
+								<p><?php echo $name;?></p>
+								<p><?php echo $data[$i]['msg']; ?></p>
+								
+							<?php
+							}
+							
+							
 							?>
-					</td>
-				</tr>
-				
-				<tr>
-					<td colspan="2" align="center"><input id="chat" name="chatPatient" type="submit" value="Chat"></td>
-				</tr>
-			</table>
-			</form>
+							
+							<?php
+							if(isset($_POST['send']))
+							{
+								$msg = $_POST['msg'];
+								$val = sendMsgP($id,$patId,$msg);
+								if($val)
+								{
+									echo $name; echo "<br>";
+									echo $msg;
+								}
+								else
+								{
+									echo "error";
+								}
+							}
+						?>
+					</div>
+						<form action="" method="post">
+							<input id="msg" name="msg" type="text" placeholder="Type your message">
+							<input id="send" name="send" type="submit" value="Send">
+						</form>
+				</div>
 	</body>
 </html>
 

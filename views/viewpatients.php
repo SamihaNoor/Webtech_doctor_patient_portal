@@ -27,7 +27,7 @@
 ?>
 <html>
 <head>
-	<title>View Doctors</title>
+	<title>View Patients</title>
 	<link href="../assets/rest2.css" rel="stylesheet">
 	<!--<script type="text/javascript" src="../assets/js.js"></script>-->
 </head>
