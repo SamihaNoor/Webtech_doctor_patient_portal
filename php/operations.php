@@ -16,7 +16,21 @@
 			}
 		}
 
-		
+	
+	//chat doctor admin
+	if(isset($_POST['chat']))
+	{
+		$docId= $_POST['docId'];
+		header('location: ../views/chatDocAdmin.php?docId='.$docId);
+	}
+	
+	//chat Patient admin
+	if(isset($_POST['chatPatient']))
+	{
+		$patId= $_GET['patId'];
+		header('location: ../views/chatPatAdmin.php?patId='.$patId);
+	}
+	
 	//doctor's consulted patients 
 	if(isset($_POST['performance']))
 	{
