@@ -56,7 +56,7 @@ body {
 	font-size: 50px;
 }
 
-#chat, #performance, #file, #review, #appointment{
+#chat, #performance, #file, #review, #appointment, #send{
 	background-color: #191970;
 	border: none;
 	color: white;
@@ -70,14 +70,14 @@ body {
 	border-radius: 32px;
 }
 
-#chat:hover, #performance:hover, #file:hover, #review:hover, #appointment:hover{
+#chat:hover, #performance:hover, #file:hover, #review:hover, #appointment:hover, #send:hover{
 	background-color: #00CED1; 
 }
 
 .table_searchdoc{
 	position: absolute;
 	top: 250px;
-	left: 300px;
+	left: 200px;
 	width: 900px;
 	text-align: center;
 }
