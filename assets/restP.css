@@ -79,7 +79,6 @@ body {
 	top: 250px;
 	left: 300px;
 	width: 900px;
-	border: 3px solid #73AD21;
 	text-align: center;
 }
 
@@ -89,16 +88,22 @@ body {
 	left: 200px;
 	width: 1100px;
 	text-align: center;
-	border: 3px solid #73AD21;
+}
+
+#table_viewdocs td, #table_appointments td{
+  padding: 4px;
+}
+
+#table_viewdocs tr:hover, #table_appointments tr:hover{
+	background-color: #ddd;
 }
 
 .table_appointments{
 	position: absolute;
 	top: 250px;
 	left: 450px;
-	width: 500px;
+	width: 600px;
 	text-align: center;
-	border: 3px solid #73AD21;
 }
 .profile_table{
 	position: absolute;
@@ -106,7 +111,6 @@ body {
 	left: 500px;
 	width: 400px;
 	height: 400px;
-	border: 3px solid #73AD21;
 }
 
 .table_docpro{
