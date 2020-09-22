@@ -48,8 +48,8 @@
 		}
 	}
 	
-	//send review
-	/*if(isset($_POST['review']))
+	//send report
+	if(isset($_POST['send']))
 	{
 		$count = count($_FILES['file']['name']);
 		for($i=0;$i<$count;$i++)
@@ -57,13 +57,13 @@
 			$filedir = '../review/'.$_FILES['file']['name'][$i];
 			if(move_uploaded_file($_FILES['file']['tmp_name'][$i], $filedir))
 			{
-				header('location: ../views/dashboard.php');
+				header('location: ../views/pat_dashboard.php');
 			}
 			else
 			{
-				header('location: ../views/viewdoctors.php');
+				header('location: ../views/pat_dashboard.php');
 			}
 		}
-	}*/
+	}
 
 ?>
