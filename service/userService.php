@@ -867,7 +867,25 @@ function getMsg($adId,$docId)
 
 		return $appointments;
 	}
-	
+	function getHistory($patId)
+	{
+		$con = dbConnection();
+
+		if(!$con)
+		{
+			echo "DB connection error";
+		}
+		$s=5;
+		$sql="select * from appointments where patId=".$patId." and status=".$s."";
+		$result= mysqli_query($con,$sql);
+		$appointments = [];
+
+		while($row = mysqli_fetch_assoc($result)){
+			array_push($appointments, $row);
+		}
+
+		return $appointments;
+	}
 	//get approved appointment
 	function getApprovedApps($patId)
 	{
