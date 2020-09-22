@@ -83,11 +83,6 @@
 								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
 							</td>
 						</tr>
-						<tr>
-							<td colspan="6" align="center">
-							
-							</td>
-						</tr>
 					<?php
 					}
 					// get canceled appointments
@@ -117,11 +112,6 @@
 							</td>
 							<td>
 								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="6" align="center">
-							
 							</td>
 						</tr>
 					<?php
@@ -155,11 +145,6 @@
 							
 							<td>
 								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="6" align="center">
-							
 							</td>
 						</tr>
 					<?php
