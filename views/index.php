@@ -1,6 +1,5 @@
 <?php
 	require_once('../service/userService.php');
-	
 ?>
 <html>
 <head>
@@ -14,9 +13,9 @@
 		<table>
 			<tr><td><button class="logbt" onclick="location.href='login.php'">Login</button></tr></td>
 			<tr><td align="center"><sub>Don't have an account?</sub></tr></td>
-			<tr><td><button class="regpat" onclick="location.href='login.php'">Register as Patient</button></tr></td>
+			<tr><td><button class="regpat" onclick="location.href='pat_registration.php'">Register as Patient</button></tr></td>
 			<tr><td align="center"><sub>or</tr></sub></td>
-			<tr><td><button class="regdoc" onclick="location.href='login.php'">Register as Doctor</button></tr></td>
+			<tr><td><button class="regdoc" onclick="location.href='docreg.php'">Register as Doctor</button></tr></td>
 		</table>
 		</div>
 		
