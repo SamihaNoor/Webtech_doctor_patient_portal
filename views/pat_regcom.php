@@ -8,9 +8,10 @@
 	<html>
 		<head>
 			<title>Registration Completed!</title>
-			<link href="../assets/rest2.css" rel="stylesheet">
+			<link href="../assets/restP.css" rel="stylesheet">
 		</head>
-			<body>
+			<h1 id="h1">Doctor-Patient Portal</h1>
+			<body align="center">
 						<br><br>
 						<h3>Registration Successful!</h3>
 						<br><br>

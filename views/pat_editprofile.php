@@ -51,7 +51,7 @@
 		<div class="profile_table">
 			<form action="../php/pat_edited.php" onsubmit="return validateP()" method="post">
 			<table>
-				<tr><td colspan="2"><h3>Personal Information</td></td></tr>
+				<tr><td colspan="2" align="center"><h3>Personal Information</td></td></tr>
 				<tr><td colspan="2" align="center"><sub>Skip any if you do not want to change.</sub></td></tr>
 				<tr><td>ID</td><td><?php echo $pat['patId'];?></td></tr>
 				

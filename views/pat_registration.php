@@ -58,6 +58,7 @@
 	<script type="text/javascript" src="../assets/registration.js"></script>
 </head>
 	<body>
+	<h1 id="h1">Doctor-Patient Portal</h1>
 		<div class="pat_registration">
 		<table>
 				<tr>
