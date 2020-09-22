@@ -77,7 +77,7 @@
 				<tr>
 					<td>Department</td>
 					<td><?php echo $doctor['dept']?></td>
-					<td><input id="review" name="review" type="submit" value="Send Review"></td>
+					<td><input id="send" name="send" type="submit" value="Send Report"></td>
 				</tr>
 				<tr>
 					<td>City</td>
