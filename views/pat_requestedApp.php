@@ -80,27 +80,12 @@
 							</td>
 							
 							<td>
-								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$pat['patId']?>'">Cancel</button>
+								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="6" align="center">
-							<?php
-								if(isset($_GET['error']))
-								{
-									if($_GET['error']=='try_again')
-									{
-										echo "Try Again";
-									}
-								}
-								if(isset($_GET['success']))
-								{
-									if($_GET['success']=='cancel')
-									{
-										echo "Appointment canceled";
-									}
-								}
-							?>
+							
 							</td>
 						</tr>
 					<?php
@@ -131,27 +116,12 @@
 								?>
 							</td>
 							<td>
-							<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$pat['patId']?>'">Cancel</button>
+								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="6" align="center">
-							<?php
-								if(isset($_GET['error']))
-								{
-									if($_GET['error']=='try_again')
-									{
-										echo "Try Again";
-									}
-								}
-								if(isset($_GET['success']))
-								{
-									if($_GET['success']=='cancel')
-									{
-										echo "Appointment canceled";
-									}
-								}
-							?>
+							
 							</td>
 						</tr>
 					<?php
@@ -184,27 +154,12 @@
 							</td>
 							
 							<td>
-								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$pat['patId']?>'">Cancel</button>
+								<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="6" align="center">
-							<?php
-								if(isset($_GET['error']))
-								{
-									if($_GET['error']=='try_again')
-									{
-										echo "Try Again";
-									}
-								}
-								if(isset($_GET['success']))
-								{
-									if($_GET['success']=='cancel')
-									{
-										echo "Appointment canceled";
-									}
-								}
-							?>
+							
 							</td>
 						</tr>
 					<?php
@@ -237,7 +192,7 @@
 							</td>
 							
 							<td>
-							<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$pat['patId']?>'">Cancel</button>
+							<button id="cancel" onclick="location.href='../php/pat_operations.php?docId=<?=$appointments[$i]['docId']?>&date=<?=$appointments[$i]['date']?>&patId=<?=$pat['patId']?>'">Cancel</button>
 							</td>
 						</tr>
 						<tr>
